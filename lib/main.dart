@@ -3,7 +3,6 @@ import 'package:flutter_web/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,7 +54,7 @@ class MyHomePage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   new Expanded(
-                    child: new Image.network('https://media.mnn.com/assets/images/2018/03/ruby-throated-hummingbird-male.jpg',height: 4.0,),
+                    child: new Image.network('https://media.mnn.com/assets/images/2018/03/ruby-throated-hummingbird-male.jpg'),
                   ),
                   new Text('HummingBird')
                 ],
