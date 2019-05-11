@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'First-app',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -23,45 +24,36 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Card(
-              child: Column(
-                children: <Widget>[
-                  new Expanded(
-                    child: new Image.network('https://avatars1.githubusercontent.com/u/14101776?s=200&v=4'),
-                  ),
-                  new Text('Flutter')
-                ],
-              ),
+      body: Stack(
+        children: <Widget>[
+          new Image.network('https://avatars0.githubusercontent.com/u/34465683?s=460&v=4',height: double.infinity,width: double.infinity),
+          Center(
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Text('Kishan Rathore',style: new TextStyle(fontSize: 32.0,color: Colors.white)),
+                new Text('Flutter Engineer  •  Web Developer  •  Sports Programmer',style: new TextStyle(fontSize: 20.0,color: Colors.white)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    new CircleAvatar(
+                      child: new Image.network('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'),
+                    ),
+                    new CircleAvatar(
+                      child: new Image.network('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'),
+                    ),
+                    new CircleAvatar(
+                      child: new Image.network('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'),
+                    ),
+                    new CircleAvatar(
+                      child: new Image.network('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            new Card(
-              child: Column(
-                children: <Widget>[
-                  new Expanded(
-                    child: new Image.network('https://avatars0.githubusercontent.com/u/34465683?s=400&u=f4496844c3d885150553caac4be569cd8ca6dd91&v=4'),
-                  ),
-                  new Text('Kishan')
-                ],
-              ),
-            ),
-            new Card(
-              child: Column(
-                children: <Widget>[
-                  new Expanded(
-                    child: new Image.network('https://media.mnn.com/assets/images/2018/03/ruby-throated-hummingbird-male.jpg'),
-                  ),
-                  new Text('HummingBird')
-                ],
-              ),
-            )
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
