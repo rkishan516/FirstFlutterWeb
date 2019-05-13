@@ -24,36 +24,50 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          new Image.network('https://avatars0.githubusercontent.com/u/34465683?s=460&v=4',height: double.infinity,width: double.infinity),
-          Center(
-            child: new Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                new Text('Kishan Rathore',style: new TextStyle(fontSize: 32.0,color: Colors.white)),
-                new Text('Flutter Engineer  •  Web Developer  •  Sports Programmer',style: new TextStyle(fontSize: 20.0,color: Colors.white)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    new CircleAvatar(
-                      child: new Image.network('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'),
-                    ),
-                    new CircleAvatar(
-                      child: new Image.network('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'),
-                    ),
-                    new CircleAvatar(
-                      child: new Image.network('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'),
-                    ),
-                    new CircleAvatar(
-                      child: new Image.network('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'),
-                    ),
-                  ],
-                ),
-              ],
+      body: new Container(
+        child: Stack(
+          children: <Widget>[
+            new Image.network('https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',fit: BoxFit.cover,height: 680.0,width: 1500.0),
+            new Center(
+              child: new Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Text('Kishan Rathore',style: new TextStyle(color: Colors.white,fontSize: 32.0)),
+                  new Text('Flutter Engineer  •  Web Developer  •  Sports Programmer',style: new TextStyle(color: Colors.white,fontSize: 20.0)),
+                  new Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      new InkWell(
+                        child: new CircleAvatar(
+                          child: new Image.network('https://cdn2.iconfinder.com/data/icons/neon-line-social-circles/100/Neon_Line_Social_Circles_50Icon_10px_grid-36-512.png'),
+                        ),
+                        onTap: null,
+                      ),
+                      new InkWell(
+                        child: new CircleAvatar(
+                          child: new Image.network('http://www.fanalists.com/wp-content/uploads/2015/08/Facebook-Icon-Grijs.png'),
+                        ),
+                        onTap: null,
+                      ),
+                      new InkWell(
+                        child: new CircleAvatar(
+                          child: new Image.network('https://cdn0.iconfinder.com/data/icons/social-network-9/50/29-512.png'),
+                        ),
+                        onTap: null,
+                      ),
+                      new InkWell(
+                        child: new CircleAvatar(
+                          child: new Image.network('https://i.ya-webdesign.com/images/gmail-symbol-png-10.png'),
+                        ),
+                        onTap: null,
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
